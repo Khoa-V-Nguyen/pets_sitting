@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_230_519_172_353) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_19_172353) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'bookings', force: :cascade do |t|
-    t.string 'first_name'
-    t.string 'last_name'
-    t.string 'animal_name'
-    t.string 'animal_type'
-    t.integer 'hours_requested'
-    t.date 'date_of_service'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "bookings", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "animal_name"
+    t.string "animal_type"
+    t.integer "hours_requested"
+    t.date "date_of_service"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end
