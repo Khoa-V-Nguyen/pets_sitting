@@ -1,4 +1,6 @@
 class Booking < ApplicationRecord
+  include PricingEngine
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :animal_name, presence: true
