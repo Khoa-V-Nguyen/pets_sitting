@@ -13,7 +13,8 @@ RSpec.describe Booking, type: :model do
   describe 'Custom Validations' do
     let(:hours_requested) { 4 }
     let(:booking) { build(:booking, hours_requested:) }
-    describe 'Valid_hours_requested' do
+
+    describe '#valid_hours_requested' do
       context 'when hours_request is between 2 and 8' do
         it 'should be valid' do
           expect(booking).to be_valid
@@ -21,7 +22,7 @@ RSpec.describe Booking, type: :model do
       end
 
       context 'when hours_request is NOT between 2 and 8' do
-        let(:hours_requested) { 1 }
+        let(:hours_requested) { 0 }
 
         it 'should NOT be valid' do
           expect(booking).to_not be_valid
