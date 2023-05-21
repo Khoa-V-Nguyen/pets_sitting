@@ -1,0 +1,29 @@
+<p>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, value: booking&.first_name %>
+</p>
+
+<p>
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, value: booking&.last_name %>
+</p>
+
+<p>
+    <%= form.label :animal_name %>
+    <%= form.text_field :animal_name, value: booking&.animal_name %>
+</p>
+
+<p>
+    <%= form.label :animal_type %>
+    <%= form.select :animal_type, ['Dog', 'Cat'] %>
+</p>
+
+<p>
+    <%= form.label :hours_requested %>
+    <%= form.number_field :hours_requested, in: 2..8, value: booking&.hours_requested %>
+</p>
+
+<p>
+    <%= form.label :date_of_service %>
+    <%= form.date_field :date_of_service, value: booking&.date_of_service %>
+</p>

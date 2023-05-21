@@ -1,17 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'bookings/new', type: :feature do
-  let!(:booking) do
-    create(
-      :booking,
-      first_name: 'Bart',
-      last_name: 'Simpson',
-      animal_name: "Santa's Little Helper",
-      animal_type: 'Dog',
-      hours_requested: 5,
-      date_of_service: Date.today
-    )
-  end
 
   scenario 'When I visit the new page I can create a booking' do
     visit new_booking_path
