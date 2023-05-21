@@ -1,0 +1,8 @@
+<h1>Update Booking</h1>
+
+<%= form_with(model: Booking, url: admin_booking_path, method: :patch) do |form| %>
+    <%= render "shared/form_fields", form: form, booking: @booking%>
+<%= form.submit 'Update' %>
+<% end %>
+
+<%= button_to "Delete booking", admin_booking_path(@booking), method: :delete%>
