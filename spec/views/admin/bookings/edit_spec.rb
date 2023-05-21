@@ -31,6 +31,22 @@ RSpec.describe 'admin/edit', type: :feature do
     expect(page).to have_text('90')
   end
 
+  scenario 'As an admin I get an error when I edit the wrong info' do
+    fill_in 'First name', with: 'Homer'
+    fill_in 'Last name', with: 'Simpson'
+    fill_in 'Animal name', with: "Santa's Little Helper"
+    select 'Dog', from: 'Animal type'
+    fill_in 'Hours requested', with: 0
+    fill_in 'Date of service', with: Date.today
+
+    click_button 'Update'
+
+    expect(page).to have_text(
+      'Hours requested must be between 2 and 8, ' \
+      "Date of service must be greater than #{Date.today}"
+    )
+  end
+
   scenario 'As an admin I can delete a booking' do
     click_button('Delete booking')
 

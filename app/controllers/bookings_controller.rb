@@ -9,13 +9,13 @@ class BookingsController < ApplicationController
 
   def create
     booking = Booking.new(booking_params)
-    
+
     if booking.save
       flash[:notice] = 'Booking was successfully created.'
       redirect_to bookings_path
     else
       flash[:alert] = booking.errors.full_messages.join(', ')
-      render :new
+      redirect_to new_booking_path
     end
   end
 

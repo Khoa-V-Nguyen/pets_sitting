@@ -14,7 +14,8 @@ class Admin::BookingsController < ApplicationController
       flash[:notice] = 'Booking was successfully updated.'
       redirect_to admin_bookings_path
     else
-      render :edit
+      flash[:alert] = @booking.errors.full_messages.join(', ')
+      redirect_to edit_admin_booking_path(@booking)
     end
   end
 

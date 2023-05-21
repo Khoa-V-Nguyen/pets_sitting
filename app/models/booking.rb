@@ -16,7 +16,7 @@ class Booking < ApplicationRecord
   end
 
   def date_of_service_check
-    return unless (date_of_service.presence || Date.today) <= Date.today
+    return unless (date_of_service || Date.today) <= Date.today
 
     errors.add(:date_of_service, "must be greater than #{Date.today}")
   end
