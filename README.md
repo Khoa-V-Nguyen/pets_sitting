@@ -57,6 +57,7 @@
       - Reading and understanding errors
       - Flow of data
       - Better security
+      - Setup `GitHub` `Action` to run `C/I`
 ## Future Iterations
 
   - In order to keep better track of `billing` I would implement the following:
