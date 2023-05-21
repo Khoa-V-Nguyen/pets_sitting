@@ -6,9 +6,9 @@
 
   - **Khoa Nguyen**
 
-    - New Github account: [GitHub](https://github.com/khoa-v-nguyen)
-    - Old Github account: [GitHub](https://github.com/omegaeye)
-    - Job Github account: [GitHub](https://github.com/omegaeye-he)
+    - New Github account: [Khoa-V-Nguyen](https://github.com/khoa-v-nguyen)
+    - Old Github account: [Omegaeye](https://github.com/omegaeye)
+    - Job Github account: [Hotel Engine](https://github.com/omegaeye-he)
     - [Link'd In](https://www.linkedin.com/in/khoa-n323)
 
 ## Summary
