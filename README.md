@@ -24,9 +24,6 @@
 
 ## Getting Started
 
-### Gemfile
-![fj-gemfile](https://user-images.githubusercontent.com/46826902/120928594-7b443000-c6a2-11eb-9007-3a0f11408cb5.png)
-
 ### Installing
 
 - Fork and clone this repo
