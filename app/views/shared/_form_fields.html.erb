@@ -25,5 +25,5 @@
 
 <p>
     <%= form.label :date_of_service %>
-    <%= form.date_field :date_of_service, value: booking&.date_of_service %>
+    <%= form.date_field :date_of_service, min: Date.today, value: booking&.date_of_service %>
 </p>

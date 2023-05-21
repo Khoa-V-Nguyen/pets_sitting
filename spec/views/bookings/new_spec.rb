@@ -10,7 +10,7 @@ RSpec.describe 'bookings/new', type: :feature do
     fill_in 'Animal name', with: "Santa's Little Helper"
     select 'Dog', from: 'Animal type'
     fill_in 'Hours requested', with: 4
-    fill_in 'Date of service', with: Date.today
+    fill_in 'Date of service', with: Date.tomorrow
 
     click_button 'Book'
 
@@ -31,8 +31,8 @@ RSpec.describe 'bookings/new', type: :feature do
       "First name can't be blank, " \
       "Last name can't be blank, " \
       "Animal name can't be blank, " \
-      "Date of service can't be blank, " \
-      'Hours requested must be between 2 and 8'
+      'Hours requested must be between 2 and 8, ' \
+      "Date of service must be greater than #{Date.today}"
     )
   end
 end

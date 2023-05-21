@@ -8,8 +8,7 @@ RSpec.describe 'admin/edit', type: :feature do
       last_name: 'Simpson',
       animal_name: "Santa's Little Helper",
       animal_type: 'Dog',
-      hours_requested: 5,
-      date_of_service: Date.today
+      hours_requested: 5
     )
   end
 
@@ -23,7 +22,7 @@ RSpec.describe 'admin/edit', type: :feature do
     fill_in 'Animal name', with: "Santa's Little Helper"
     select 'Dog', from: 'Animal type'
     fill_in 'Hours requested', with: 8
-    fill_in 'Date of service', with: Date.today
+    fill_in 'Date of service', with: Date.tomorrow
 
     click_button 'Update'
 
