@@ -50,30 +50,37 @@
 <p align="left"> <a href="https://www.postgresql.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://rubyonrails.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" alt="rails" width="40" height="40"/> </a> <a href="https://www.ruby-lang.org/en/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby" width="40" height="40"/> </a> </p>
 
 ## Reflection
-  - Following the process of TDD allowed me to thoroughly organize my thoughts and plan out the algorithm of this project.
-    - To reduce the negative user experience, sad path and edge case was included and tested thoroughly. Test coverage is 100%.
-    - Writing the tests and using the errors to guide me on what code to write.
-      - Reading and understanding errors
-      - Better security
-  - Setup `GitHub` `Action` to run `C/I`
-    - run the whole test suite to make sure new codes doesn't break existing codes.
-## Future Iterations
-  - Options to keep better track of `billing` I would implement the following:
-    - Add/Update tables:
-      - add `user` table: track all `pets` and `billings` for all users
-        - `has_many` `invoices`
-        - `has_many` `invoice_items` through `invoices`
-        - `has_many` `bookings` through `invoices`
-        - `has_many` `pets`
-      - add `pet` table: track all the `pets` that a `user` has
-        - `belongs_to` a `user`
-      - add `invoice` table: track `user` and `invoice_items` and `subtotal`
-        - `belongs_to` a `user`
-        - delegate `first_name` to `user`
-        - delegate `last_name` to `user`
-      - add `invoice_item` table: track `pet`, `user`, and `invoice`
-        - `belongs_to` `invoice`
-        - `belongs_to` `user`
-        - `belongs_to` `pet`
-      - update `booking` table: track `bookings` for all `invoices`
-        - `belongs_to` `invoice`
+- Following the process of TDD (Test-Driven Development) allowed me to thoroughly organize my thoughts and plan out the algorithm for this project.
+  - To ensure a better user experience, I included and thoroughly tested sad paths and edge cases, resulting in 100% test coverage.
+  - Writing tests helped guide me in writing the necessary code by understanding and addressing the errors.
+  - This approach also enhances security by catching potential issues early on.
+  
+- I set up a GitHub Action to run continuous integration (CI) to ensure that the entire test suite is executed, preventing any new code from breaking existing code.
+
+- For this simple Rails project, I had a couple of directions in mind:
+
+  - Targeting a company or enabling high schoolers to manage bookings.
+  - I chose the latter option, so user management was not necessary.
+  - The goal of this app is to allow anyone to make bookings, with the admin/sitter having the ability to make adjustments.
+
+- In future iterations, I would consider the following enhancements to improve billing tracking:
+
+  - Add/update tables:
+    - Add a users table: to track all pets and billings for each user.
+      - has_many invoices
+      - has_many invoice_items through invoices
+      - has_many bookings through invoices
+      - has_many pets
+    - Add a pets table: to track all the pets associated with a user.
+      - belongs_to a user
+    - Add an invoices table: to track users, invoice_items, and subtotals.
+      - belongs_to a user
+      - Delegate first_name to user
+      - Delegate last_name to user
+    - Add an invoice_items table: to track pets, users, and invoices.
+      - belongs_to an invoice
+      - belongs_to a user
+      - belongs_to a pet
+    - Update the bookings table: to track bookings for all invoices.
+      - belongs_to an invoice
+- I would appreciate the opportunity to discuss my thought process behind this project further.
