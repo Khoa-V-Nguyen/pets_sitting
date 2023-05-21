@@ -64,8 +64,8 @@
 - For this simple Rails project, I had a couple of directions in mind:
 
   - Targeting a company or enabling high schoolers to manage bookings.
-  - I chose the latter option, so user management was not necessary.
-  - The goal of this app is to allow anyone to make bookings, with the admin/sitter having the ability to make adjustments.
+    - I chose the latter option, so user management was not necessary.
+    - The goal of this app is to allow anyone to make bookings, with the admin/sitter having the ability to make adjustments.
 
 - In future iterations, I would consider the following enhancements to improve billing tracking:
 
