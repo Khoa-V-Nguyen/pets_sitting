@@ -41,9 +41,13 @@
 
 <img width="412" alt="Screenshot 2023-05-21 at 11 20 58 AM" src="https://github.com/Khoa-V-Nguyen/pets_sitting/assets/134089461/f69001d8-072b-4ceb-aeef-900b8418f244">
 
-#### Admin Index page
+#### Admin Booking Index page
 
 <img width="778" alt="Screenshot 2023-05-21 at 11 23 41 AM" src="https://github.com/Khoa-V-Nguyen/pets_sitting/assets/134089461/96f8f37b-7ff2-477c-b9f1-75340c72192c">
+
+#### Admin Booking edit page
+
+<img width="561" alt="Screenshot 2023-05-21 at 3 04 44 PM" src="https://github.com/Khoa-V-Nguyen/pets_sitting/assets/134089461/547c4e2f-41fc-4126-9247-ded9a4b0615b">
 
 ## Built With
 
