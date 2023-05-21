@@ -1,23 +1,35 @@
 <h1>Book a Cat or Dog Sitting</h1>
 
 <%= form_with(model: Booking, url: bookings_path, method: :post) do |form| %>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <p>
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name %>
+    </p>
 
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <p>
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name %>
+    </p>
 
-    <%= form.label :animal_name %>
-    <%= form.text_field :animal_name %>
+    <p>
+        <%= form.label :animal_name %>
+        <%= form.text_field :animal_name %>
+    </p>
 
-    <%= form.label :animal_type %>
-    <%= form.select :animal_type, ['Dog', 'Cat'] %>
+    <p>
+        <%= form.label :animal_type %>
+        <%= form.select :animal_type, ['Dog', 'Cat'] %>
+    </p>
 
-    <%= form.label :hours_requested %>
-    <%= form.number_field :hours_requested, in: 2..8 %>
+    <p>
+        <%= form.label :hours_requested %>
+        <%= form.number_field :hours_requested, in: 2..8 %>
+    </p>
 
-    <%= form.label :date_of_service %>
-    <%= form.date_field :date_of_service %>
+    <p>
+        <%= form.label :date_of_service %>
+        <%= form.date_field :date_of_service %>
+    </p>
 
     <%= form.submit 'Book' %>
 <% end %>
