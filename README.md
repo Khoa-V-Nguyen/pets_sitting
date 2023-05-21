@@ -6,9 +6,9 @@
 
   - **Khoa Nguyen**
 
-    - [GitHub](https://github.com/khoa-v-nguyen)
-    - [GitHub](https://github.com/omegaeye)
-    - [GitHub](https://github.com/omegaeye-he)
+    - New Github account: [GitHub](https://github.com/khoa-v-nguyen)
+    - Old Github account: [GitHub](https://github.com/omegaeye)
+    - Job Github account: [GitHub](https://github.com/omegaeye-he)
     - [Link'd In](https://www.linkedin.com/in/khoa-n323)
 
 ## Summary
