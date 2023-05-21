@@ -8,7 +8,6 @@
 
     - New Github account: [Khoa-V-Nguyen](https://github.com/khoa-v-nguyen)
     - Old Github account: [Omegaeye](https://github.com/omegaeye)
-    - Job Github account: [Hotel Engine](https://github.com/omegaeye-he)
     - [Link'd In](https://www.linkedin.com/in/khoa-n323)
 
 ## Summary
@@ -51,32 +50,30 @@
 <p align="left"> <a href="https://www.postgresql.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://rubyonrails.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" alt="rails" width="40" height="40"/> </a> <a href="https://www.ruby-lang.org/en/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby" width="40" height="40"/> </a> </p>
 
 ## Reflection
-  - Following the process of TDD allowed me to thoroughly organized my thoughts and planned out the algorithm of this project.
+  - Following the process of TDD allowed me to thoroughly organize my thoughts and plan out the algorithm of this project.
     - To reduce the negative user experience, sad path and edge case was included and tested thoroughly. Test coverage is 100%.
     - Writing the tests and using the errors to guide me on what code to write.
       - Reading and understanding errors
-      - Flow of data
       - Better security
-      - Setup `GitHub` `Action` to run `C/I`
+  - Setup `GitHub` `Action` to run `C/I`
+    - run the whole test suite to make sure new codes doesn't break existing codes.
 ## Future Iterations
-
-  - In order to keep better track of `billing` I would implement the following:
-    - add `user` table
-      - `has_many` `invoices`
-      - `has_many` `invoice_items` through `invoices`
-      - `has_many` `bookings` through `invoices`
-      - `has_many` `pets`
-    - add `pet` table
-      - `belongs_to` a `user`
-    - add `invoice` table
-      - `belongs_to` a `user`
-      - delegate `first_name` to `user`
-      - delegate `last_name` to `user`
-    - add `invoice_item` table
-      - `belongs_to` `invoice`
-      - `belongs_to` `user`
-      - `belongs_to` `pet`
-    - update `booking` table
-      - `belongs_to` `invoice`
-
-## Acknowledgement
+  - Options to keep better track of `billing` I would implement the following:
+    - Add/Update tables:
+      - add `user` table: track all `pets` and `billings` for all users
+        - `has_many` `invoices`
+        - `has_many` `invoice_items` through `invoices`
+        - `has_many` `bookings` through `invoices`
+        - `has_many` `pets`
+      - add `pet` table: track all the `pets` that a `user` has
+        - `belongs_to` a `user`
+      - add `invoice` table: track `user` and `invoice_items` and `subtotal`
+        - `belongs_to` a `user`
+        - delegate `first_name` to `user`
+        - delegate `last_name` to `user`
+      - add `invoice_item` table: track `pet`, `user`, and `invoice`
+        - `belongs_to` `invoice`
+        - `belongs_to` `user`
+        - `belongs_to` `pet`
+      - update `booking` table: track `bookings` for all `invoices`
+        - `belongs_to` `invoice`
