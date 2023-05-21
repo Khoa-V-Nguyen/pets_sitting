@@ -8,8 +8,7 @@ RSpec.describe 'admin/bookings/index', type: :feature do
       last_name: 'Simpson',
       animal_name: "Santa's Little Helper",
       animal_type: 'Dog',
-      hours_requested: 5,
-      date_of_service: Date.today
+      hours_requested: 5
     )
   end
   let!(:cat_booking) do
@@ -19,8 +18,7 @@ RSpec.describe 'admin/bookings/index', type: :feature do
       last_name: 'Simpson',
       animal_name: 'Snowball',
       animal_type: 'Cat',
-      hours_requested: 5,
-      date_of_service: Date.today
+      hours_requested: 5
     )
   end
 
@@ -34,7 +32,7 @@ RSpec.describe 'admin/bookings/index', type: :feature do
         expect(page).to have_text("Santa's Little Helper")
         expect(page).to have_text('Dog')
         expect(page).to have_text('5')
-        expect(page).to have_text(Date.today)
+        expect(page).to have_text(Date.tomorrow)
         expect(page).to have_text(dog_booking.subtotal)
       end
 
@@ -44,7 +42,7 @@ RSpec.describe 'admin/bookings/index', type: :feature do
         expect(page).to have_text('Snowball')
         expect(page).to have_text('Cat')
         expect(page).to have_text('5')
-        expect(page).to have_text(Date.today)
+        expect(page).to have_text(Date.tomorrow)
         expect(page).to have_text(cat_booking.subtotal)
       end
     end

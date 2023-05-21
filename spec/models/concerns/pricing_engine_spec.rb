@@ -8,8 +8,7 @@ RSpec.describe PricingEngine do
       last_name: 'Simpson',
       animal_name: "Santa's Little Helper",
       animal_type: 'Dog',
-      hours_requested: 5,
-      date_of_service: Date.today
+      hours_requested: 5
     )
   end
 
