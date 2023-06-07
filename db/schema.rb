@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_19_172353) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_280351) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,4 +25,34 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_19_172353) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pet_sitters", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "sitter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pet_sitters_on_user_id"
+  end
+
+  create_table "pets", force: :cascade do |t|
+    t.string "pet_name"
+    t.integer "species"
+    t.integer "age"
+    t.bigint "user_id", null: false
+    t.bigint "pet_sitter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pet_sitter_id"], name: "index_pets_on_pet_sitter_id"
+    t.index ["user_id"], name: "index_pets_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "pets", "pet_sitters"
+  add_foreign_key "pets", "users"
 end
