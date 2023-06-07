@@ -1,5 +1,7 @@
 class PetSitter < ApplicationRecord
-  belongs_to :user
-  belongs_to :sitter, class_name: 'User'
-  has_many :pets
+  validates :sitter_name, presence: true
+  validates :contact_info, presence: true
+
+  has_many :pets, foreign_key: :sitter_id, inverse_of: :sitter
+  has_many :owners, through: :pets, source: :owner
 end
