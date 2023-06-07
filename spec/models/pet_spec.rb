@@ -10,8 +10,7 @@ RSpec.describe Pet, type: :model do
     subject(:pet) { build(:pet) }
 
     it do
-      is_expected.to belong_to(:user)
-      is_expected.to belong_to(:pet_sitter)
+      is_expected.to belong_to(:owner).class_name('User')
     end
   end
 end

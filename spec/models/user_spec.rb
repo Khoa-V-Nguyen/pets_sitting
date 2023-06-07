@@ -10,8 +10,8 @@ RSpec.describe User, type: :model do
     subject(:user) { build(:user) }
 
     it do
-      is_expected.to have_many(:sitters)
       is_expected.to have_many(:pets)
+      is_expected.to have_many(:pet_sitters).through(:pets)
     end
   end
 end

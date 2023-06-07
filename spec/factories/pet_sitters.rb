@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :pet_sitter do
-    user
+    contact_info { Faker::PhoneNumber.phone_number }
   end
 end
